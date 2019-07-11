@@ -23,5 +23,6 @@
 	<input placeholder="twitter" type="text" name="twitter" class="form-control" value="<?php echo $user['twitter'];?>"><br>
 	<input placeholder="Instagram" type="text" name="instagram" class="form-control" value="<?php echo $user['instagram'];?>"><br>
 	<input placeholder="Jurusan" type="text" name="jurusan" class="form-control" value="<?php echo $user['jurusan'];?>"><br>
+	<i>*isi dengan (-) bila tidak ada</i><br>
 	<button class="btn btn-primary" class="form-control" type="submit">Update</button>
 </form>

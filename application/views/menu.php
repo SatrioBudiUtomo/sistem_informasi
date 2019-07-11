@@ -1,8 +1,8 @@
 <?php if (!$this->session->userdata('email')) { ?>
 <li><a href="<?php echo site_url('login');?>">Login</a></li>
 <li><a href="<?php echo site_url('User/registrasi');?>">Registrasi</a></li>
-<?php } else { ?>
 
+<?php } else { ?>
 
 <?php };?>
 <?php if($this->session->userdata('role')==='Admin'){ ?>
@@ -21,7 +21,6 @@
               <ul class="dropdown-menu" role="menu">
                 <li><a href="<?php echo site_url('User/manage');?>">Manage User</a></li>
                 <li><a href="<?php echo site_url('User/pekerjaan');?>">Manage Jenis Pekerjaan</a></li>
-                <li><a href="<?php echo site_url('Admin/informasi');?>">Web Info</a></li>
                
               </ul>
             </li>
@@ -29,7 +28,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Informasi<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="<?php echo site_url('Berita');?>">Post Berita</a></li>
-                
+                <li><a href="<?php echo site_url('Admin/informasi');?>">Web Info</a></li>
                
                
               </ul>

@@ -2,7 +2,7 @@
     <section class="content">
 
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-sm-12">
           <!-- AREA CHART -->
           <div class="box box-primary">
             <div class="box-header with-border">
@@ -11,28 +11,29 @@
               <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
                 </button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
               </div>
             </div>
             <div class="box-body">
-              <table class="table table-bordered">
-              	<thead class="bg-green">
-              		<th width="5%">No</th>
-              		<th width="20%">Angkatan</th>
-              		<th>Jml Lulusan</th>
-              		<th>Jml Lulusan Pria</th>
-              		<th>Jml Lulusan Wanita</th>
-              	</thead>
-              	<?php $no=0; foreach($ang as $b): $no++ ;?>
-              	<tr>
+              <div class="table-responsive">
+                <table class="table">
+              	 <thead class="bg-green">
+              		  <th width="5%">No</th>
+              		  <th width="20%">Angkatan</th>
+              		  <th>Jml Lulusan</th>
+              		  <th>Jml Lulusan Pria</th>
+              		  <th>Jml Lulusan Wanita</th>
+              	 </thead>
+              	 <?php $no=0; foreach($ang as $b): $no++ ;?>
+              	 <tr>
               		<td><?php echo $no;?></td>
               		<td><a href="<?php echo site_url('User/angkatan/'.$b->angkatan) ;?>"><?php echo $b->angkatan;?></a></td>
               		<td><?php echo jml_ang($b->angkatan) ;?></td>
               		<td><?php echo jml_jk($b->angkatan, 'L');?></td>
               		<td><?php echo jml_jk($b->angkatan, 'P');?></td>
               	</tr>
-              <?php endforeach;?>
+                <?php endforeach;?>
               </table>
+              </div>  
             </div>
             <!-- /.box-body -->
           </div>
@@ -53,7 +54,6 @@
               <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
                 </button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
               </div>
             </div>
             <div class="box-body">
@@ -81,7 +81,6 @@
               <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
                 </button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
               </div>
             </div>
             <div class="box-body">

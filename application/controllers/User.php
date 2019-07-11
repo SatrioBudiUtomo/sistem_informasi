@@ -298,16 +298,11 @@ class User extends CI_Controller
 		$this->load->view('welcome_message', $data);
 	}
 
-	function editPass()
+	function deleteUser()
 	{
 		levelAdmin();
 		$idnya = $this->input->post('id');
-		$data = array(
-			'password'=>md5($this->input->post('password'))
-			);
-
-		$this->db->where('id_user', $idnya);
-		$this->db->update('user', $data);
+		$this->user->deleteUser($idnya);
 		redirect('User/manage');
 	}
 

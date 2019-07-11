@@ -16,33 +16,35 @@
 	</div>
 </div>
 
-<div class="box box-danger">
+<div class="box box-success">
 	<div class="box-header">
 		<div class="box-title">Daftar Berita</div>
 	</div>
 	<div class="box-body">
-		<table id="example1" class="table table-bordered table-striped">
-		<thead>
-			<th width="5%">No</th>
-			<th width="60%">Judul Berita</th>
-			<th width="15%">Tgl Terbit</th>
-			<th width="20%">Aksi</th>
-		</thead>
-		<?php $no=0; foreach($berita as $b): $no++ ;?>
-		<tr>
-			<td><?php echo $no;?></td>
-			<td><?php echo $b->judul;?></td>
-			<td><?php echo $b->tgl_berita;?></td>
-			<td><button type="button" class="btn btn-warning" data-toggle="modal" data-target="#edit<?php echo $b->id_berita;?>"><i class="fa fa-edit"></i></button>
-			<a href="<?php echo site_url('Berita/delete/'.$b->id_berita);?>" onclick="return confirm('Apakah Anda Ingin Menghapus Data Ini');" class="btn btn-danger"><i class="fa fa-trash"></i></a>
-			</td>
-		</tr>
-	<?php endforeach;?>
-		</table>
+		<div class="table-responsive">
+			<table id="example1" class="table">
+			<thead>
+				<th width="5%">No</th>
+				<th width="60%">Judul Berita</th>
+				<th width="15%">Tgl Terbit</th>
+				<th width="20%">Aksi</th>
+			</thead>
+			<?php $no=0; foreach($berita as $b): $no++ ;?>
+				<tr>
+					<td><?php echo $no;?></td>
+					<td><?php echo $b->judul;?></td>
+					<td><?php echo $b->tgl_berita;?></td>
+					<td><button type="button" class="btn btn-warning" data-toggle="modal" data-target="#edit<?php echo $b->id_berita;?>"><i class="fa fa-edit"></i></button>
+					<a href="<?php echo site_url('Berita/delete/'.$b->id_berita);?>" onclick="return confirm('Apakah Anda Ingin Menghapus Data Ini');" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+					</td>
+				</tr>
+				<?php endforeach;?>
+			</table>
+		</div>	
 	</div>
 </div>
 <?php foreach ($berita as $c) { ?>
-<div class="modal fade modal-warning " id="edit<?php echo $c->id_berita;?>"  role="dialog">
+<div class="modal fade modal " id="edit<?php echo $c->id_berita;?>"  role="dialog">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">

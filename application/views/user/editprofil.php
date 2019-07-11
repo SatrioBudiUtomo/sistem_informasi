@@ -23,5 +23,7 @@
 	<input placeholder="Nama Universitas" type="text" name="universitas" class="form-control" value="<?php echo $user['universitas'];?>"><br>
 	<input placeholder="Nama Fakultas" type="text" name="fakultas" class="form-control" value="<?php echo $user['fakultas'];?>"><br>
 	<input placeholder="Jurusan" type="text" name="jurusan" class="form-control" value="<?php echo $user['jurusan'];?>"><br>
+	<i>*isi dengan (-) bila tidak ada</i><br>
 	<button class="btn btn-primary" class="form-control" type="submit">Update</button>
+
 </form>

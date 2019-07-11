@@ -1,7 +1,7 @@
 <h4>Data Lulusan Berdasarkan Pekerjaan</h4>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-warning"><i class="fa fa-plus"></i> Tambah Jenis Pekerjaan</button><br>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-success"><i class="fa fa-plus"></i> Tambah Jenis Pekerjaan</button><br>
 
-<div class="modal fade modal-warning " tabindex="-1" role="dialog">
+<div class="modal fade" id="modal-success" tabindex="-1" role="dialog">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -16,8 +16,8 @@
                 </div>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Tutup</button>
-                <button type="submit" class="btn btn-outline">Simpan</button>
+                <button type="button" class="btn btn-secondary pull-left" data-dismiss="modal">Tutup</button>
+                <button type="submit" class="btn btn-success">Simpan</button>
                 </form>
               </div>
             </div>
@@ -26,7 +26,7 @@
           <!-- /.modal-dialog -->
         </div>
         <!-- /.modal --><br>
-<div class="box box-warning">
+<div class="box box-success">
 	<div class="box-body">
 	<h4>Daftar Jenis Pekerjaan</h4><br>
 		 <table id="example1" class="table table-bordered table-striped">
