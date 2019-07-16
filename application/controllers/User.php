@@ -301,7 +301,7 @@ class User extends CI_Controller
 	function deleteUser()
 	{
 		levelAdmin();
-		$idnya = $this->input->post('id');
+		$idnya = $this->delete->post('id');
 		$this->user->deleteUser($idnya);
 		redirect('User/manage');
 	}

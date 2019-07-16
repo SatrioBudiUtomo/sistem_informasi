@@ -45,7 +45,6 @@
 					<td><?php if($a->last_login === '0000-00-00 00:00:00'){echo "Belum Login";} else {echo time_ago($a->last_login);}  ;?></td>
 					<td><?php if ($a->active==='0'){echo "<span class='label bg-yellow'>Belum Aktif</span>";} else if ($a->active==='1'){echo "<span class='label bg-green'>Aktif</span>";} ;?></td>
 					<td><a href="<?php echo site_url('User/deactive/'.$a->id_user);?>" class="btn btn-warning">Non-aktifkan</a>
-					<a type="button" class="btn btn-danger" data-toggle="modal" data-target=".modal-edit<?php echo $a->id_user;?>"><i class="fa fa-lock"></i></a>
 					<?php if($a->role==='Member'){ ?>
 					<a href="<?php echo site_url('User/makeAdmin/'.$a->id_user);?>" class="btn btn-primary">Jadikan Admin</a>
 					<?php } else {?>
@@ -59,30 +58,3 @@
 	</div>
 </div>
 
-<?php foreach($ua as $k){ ?>
-<div class="modal fade modal-edit<?php echo $k->id_user;?> modal-success" tabindex="-1" role="dialog">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Ubah Password User</h4>
-              </div>
-              <div class="modal-body">
-              <form action="<?php echo site_url('User/editPass');?>" method="post">
-                <div class="form-group">
-                	<input type="hidden" name="id" value="<?php echo $k->id_user;?>">
-                	<input type="password" required name="password" class="form-control" placeholder="Ketik Password Pengganti">
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Tutup</button>
-                <button type="submit" class="btn btn-outline">Simpan</button>
-                </form>
-              </div>
-            </div>
-            <!-- /.modal-content -->
-          </div>
-          <!-- /.modal-dialog -->
-        </div>
-        <?php } ;?>
